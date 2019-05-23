@@ -3,50 +3,65 @@
     <title>Initab Clone</title>
     <head>
 <style>
+    body {
+        margin: 0px;
+    }
 #wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr 5fr 2fr;
     grid-template-rows: repeat(1fr, 9);
     height: 100vh;
+
     
     
 
 }
+hr {
+    background-color: #6272A4;
+}
+/*
 .borders {
     border: 1px solid;
 }
+*/
 #box1 {
+    background-color: #44475A;
     grid-row: 1/10;
     }
 #box2 {
+    background-color: #282A36;
     grid-row: 1/10;
    
 }
 #box3 {
+    background-color: #282A36;
     grid-row: 1/2;
     padding-bottom: 1px;
     
 }
 #box4 {
+    background-color: #282A36;
     grid-row: 2/10;
 }
 #box5 {
-    grid-row: 1/2;
+    background-color: #282A36;
+    grid-row: 1/10;
 }
 
 .RedditCards {
 display: block;
 width: 250px;
 height: auto;
+margin-left: 15px;
 padding-left: 20px;
 margin-bottom: 40px;
-border-left: 3px solid aqua;
+border-left: 3px solid #44475A;
 }
 .RedditCards:hover {
-    border-left: 6px solid yellowgreen;  
+    border-left: 3px solid #50FA7B;  
     cursor: pointer;
     transition-duration: 200ms;
-
+  
 }
 p {
 font-family: monospace;
@@ -55,19 +70,66 @@ line-height: 22px;
 }
 .JSHistory {
 font-family: monospace;
+color: #6272A4;
 font-size: 14px;
 line-height: 30px;
 padding-bottom: 2px;
 }
 .heading {
     display: block;
+    color:  #8BE9FD;
     font-family: monospace;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
 
 }
+/* clock cstyling code below */
+#hours {
+  font-family: sans-serif;
+  color: #6272A4;
+
+  font-size: 120px;
+  text-align: center;
+  
+}
+#minutes {
+  font-family: sans-serif;
+  color: #6272A4;
+  font-size: 120px;
+  text-align: center;
+  
+}
+#ampm  {
+ 
+  font-family: sans-serif;
+  color: #6272A4;
+  padding-top: 77px;
+  font-size: 40px;
+  
+ 
+
+}
+.clockwrapper {
+    display: flex;
+    justify-content: center;
+    
+    }
+.yearwrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+#month {
+    display:  block;
+    position: relative;
+    font-size: 25px;
+    color:#6272A4 ;
+    bottom: 15px;
+    right: 20px;
+}
+/*Above clock styling code*/
 </style>
     </head>
     <body>
@@ -88,30 +150,32 @@ padding-bottom: 2px;
 <div class="borders" id="box2">
     <heading class="heading">POPULAR ON R/JAVSCRIPT</heading>
 <div class="RedditCards">
-    <p> Faster smarter Javascript debugging In Firefox DevTools</br>
-    Posted by: u/magneta_placenta</br>
-    Reddit Score: 243</br>
-    Link to comments</p>
+    <p> <span style="color: white;">Faster smarter Javascript debugging In Firefox DevTools</span></br>
+    <span style="color:#8BE9FD "> Posted by:</span> <span style="color: yellow;">u/magneta_placenta</span></br>
+    <span style="color:#6272A4 ">Reddit Score: 243</span></br>
+    <span style="color:#FF79C6 ;">Link to comments</span></p>
 
 </div>
 <div class="RedditCards">
-    <p>Announcing TypeScript 3.5 RC</br>
-    Posted by:u/DanielRosenwaser</br>
-    Reddit Score: 32</br>
-    Link to comments</p>
+
+    <p><span style="color: white;">Announcing TypeScript 3.5 RC</span></br>
+    <span style="color:#8BE9FD ">Posted by:</span><span style="color: yellow;">u/DanielRosenwaser</span> </br>
+    <span style="color:#6272A4 ">Reddit Score: 32</span></br>
+    <span style="color:#FF79C6 ;">Link to comments</span></p>
 
 </div>
 <div class="RedditCards">
-    <p>The clearer explanation of the fundamentals behind identity in FP I have ever seen</br>
-    Posted by: u/Fagnerbrack</br>
-    Reddit Score: 7</br>
-    Link to comments</p>
+    <p><span style="color: white;">The clearer explanation of the fundamentals behind identity in FP I have ever seen</span></br>
+        <span style="color:#8BE9FD ">Posted by:</span> <span style="color: yellow;">u/Fagnerbrack</span> </br>
+        <span style="color:#6272A4 ">Reddit Score: 7 </span> </br>
+        <span style="color:#FF79C6 ;"> Link to comments</span> </p>
 
 </div>
 <div class="RedditCards">
-    <p>Chat applicaton using webRTC</br>
-    Posted by: u/HydroPhobeFireMan</br>
-    Reddict Score: 3</p>
+    <p><span style="color: white;">Chat applicaton using webRTC</span></br>
+        <span style="color:#8BE9FD ">Posted by: </span> <span style="color: yellow;">u/HydroPhobeFireMan</span> </br>
+        <span style="color:#6272A4 ">Reddict Score: 3  </span> <br> 
+        <span style="color:#FF79C6 ;">Link to comments </span>  </p>
 
 </div>
 <div class="RedditCards">
@@ -122,19 +186,89 @@ padding-bottom: 2px;
 </div>
 <div class="borders" id="box3"> 
 <heading class="heading">RELEVANT JAVASCRIPT HISTORY </heading>
-<P class="JSHistory">Data structures: Objects and Arrays :: Eloquent Javascript <span style="float: right;">2 days ago</span> </br>
-Ways  of Iterating over an array in Javascript. - GeeksForGeeks<span style="float: right;">2 days ago</span> </br>
-Javascript - Understand the arrow function syntax - codeburst<span style="float: right;">2 days ago</span> </br>
-Fucntions :: Eloquent Javascript <span style="float: right;">2 days ago</span></br>
-Why is Javascript hard to learn? <span style="float: right;">2 days ago</span></br>
-Program Structure :: Eloquent Javascript <span style="float: right;">2 days ago</span> </p>
+<P class="JSHistory"> <a>Data structures: Objects and Arrays :: Eloquent Javascript </a><span style="float: right;">2 days ago</span> </br>
+<a>Ways  of Iterating over an array in Javascript. - GeeksForGeeks</a><span style="float: right;">2 days ago</span> </br>
+<a>Javascript - Understand the arrow function syntax - codeburst</a><span style="float: right;">2 days ago</span> </br>
+<a>Fucntions :: Eloquent Javascript</a> <span style="float: right;">2 days ago</span></br>
+<a>Why is Javascript hard to learn?</a> <span style="float: right;">2 days ago</span></br>
+<a>Program Structure :: Eloquent Javascript</a> <span style="float: right;">2 days ago</span> </p>
 <hr>
 </div>
-<div class="borders" id="box4"> 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, accusantium.</div>
+<div class="borders" id="box4"> 
+
+    <div class="clockwrapper">
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="ampm"></div>
+        
+        
+    </div>
+    <div class="yearwrapper">
+        <div id="month"></div>
+    </div>
+    
+
+    
+
+</div>
 <div class="borders" id="box5"> 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, numquam.</div>
 
 
 
 </div>
+<script>
+    function hours() {
+  var d = new Date();
+  var hours = d.getHours();
+ 
+  document.getElementById("hours").innerHTML = hours ;
+  
+  
+}
+
+setInterval(hours,1000)
+
+function minutes() {
+  var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+ 
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  document.getElementById("minutes").innerHTML = ":" + minutes ;
+  
+  
+}
+
+setInterval(minutes,1000)
+
+function ampm() {
+  var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  document.getElementById("ampm").innerHTML = ampm;
+  
+  
+}
+
+setInterval(ampm,1000)
+
+var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"]
+
+function month() {
+    var d = new Date();
+    var moon = d.getMonth();
+    var year = d.getFullYear();
+    document.getElementById("month").innerHTML = monthNames[moon] + ", " + year;
+    
+}
+ setInterval(month,1000);
+ 
+
+
+</script>
     </body>
 </html>
