@@ -27,6 +27,10 @@ hr {
 #box1 {
     background-color: #44475A;
     grid-row: 1/10;
+    font-size: 10px;
+    padding-top: 20px;
+    font-weight: 300px;
+    
     }
 #box2 {
     background-color: #282A36;
@@ -47,7 +51,34 @@ hr {
     background-color: #282A36;
     grid-row: 1/10;
 }
-
+ul li {
+padding-top: 20px;
+}
+#list {
+    list-style: none;
+}
+#list li#settings {
+    list-style-image: url(https://i.imgur.com/Rm83pje.png);
+    
+}
+#list li#gists {
+    list-style-image: url(https://i.imgur.com/Pd6XUN0.png);
+}
+#list li#stack_overflow {
+    list-style-image: url(https://i.imgur.com/xVp7TzZ.png);
+}
+#list li#trending {
+    list-style-image: url(https://i.imgur.com/OBWtdka.png);
+}
+#list li#scratch_pad {
+    list-style-image: url(https://i.imgur.com/WEbKv5y.png);
+}
+#list li#playground {
+    list-style-image: url(https://i.imgur.com/QfxUFfD.png);
+}
+#list li#help {
+    list-style-image: url(https://i.imgur.com/VYsX0ec.png);
+}
 .RedditCards {
 display: block;
 width: 250px;
@@ -136,14 +167,15 @@ padding-bottom: 2px;
 <div id="wrapper">
 
 <div class="borders" id="box1"> 
-<ul>
-    <li>SETTTINGS</li>
-    <li>GISTS</li>
-    <li>STACK OVERFLOW</li>
-    <li>TRENDING</li>
-    <li>SCRATCH PAD</li>
-    <li>PLAYGROUND</li>
-    <li>HELP/INTRO</li>
+<ul id="list">
+    <li id="settings"> <span style="color: #8BE9FD;">SETTTINGS</span> </li>
+    <li id="gists"> <span style="color:#50FA7B;">GISTS</span> </li>
+   
+    <li id="stack_overflow"> <span style="color: #FFB86C;">STACK OVERFLOW</span> </li>
+    <li id="trending">  <span style="color:#FF79C6; ">TRENDING</span> </li>
+    <li id="scratch_pad"> <span style="color:#BD93F9; ">SCRATCH PAD</span> </li>
+    <li id="playground"> <span style="color: white;">PLAYGROUND </span></li>
+    <li id="help"> <span style="color: #E6DB74;">HELP/INTRO </span></li>
 </ul>
 
 </div>
