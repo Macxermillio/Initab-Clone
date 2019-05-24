@@ -8,7 +8,7 @@
     }
 #wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr 5fr 2fr;
+    grid-template-columns: 1.1fr 2fr 5fr 2fr;
     grid-template-rows: repeat(1fr, 9);
     height: 100vh;
 
@@ -51,11 +51,14 @@ hr {
     background-color: #282A36;
     grid-row: 1/10;
 }
-ul li {
-padding-top: 20px;
-}
+
 #list {
     list-style: none;
+    font-size: 11px;
+    
+}
+#list li {
+    padding-bottom: 20px;
 }
 #list li#settings {
     list-style-image: url(https://i.imgur.com/Rm83pje.png);
@@ -99,12 +102,33 @@ font-family: monospace;
 font-size: 14px;
 line-height: 22px;
 }
-.JSHistory {
+#JSHistory {
 font-family: monospace;
 color: #6272A4;
 font-size: 14px;
-line-height: 30px;
-padding-bottom: 2px;
+
+}
+#JSHistory li {
+    padding-bottom: 10px;
+}
+#JSHistory li#DataS{
+    list-style-image: url(https://i.imgur.com/ut0SvCo.png);
+
+}
+#JSHistory li#Ways {
+    list-style-image: url(https://i.imgur.com/lKVAJ1f.png);
+}
+#JSHistory li#Arrow {
+    list-style-image: url(https://i.imgur.com/JRjMTwa.png);
+}
+#JSHistory li#Functions {
+    list-style-image: url(https://i.imgur.com/ut0SvCo.png);
+}
+#JSHistory li#Reddit {
+    list-style-image: url(https://i.imgur.com/04J1Wk0.png);
+}
+#JSHistory li#Programst {
+    list-style-image: url(https://i.imgur.com/ut0SvCo.png);
 }
 .heading {
     display: block;
@@ -171,7 +195,7 @@ padding-bottom: 2px;
     <li id="settings"> <span style="color: #8BE9FD;">SETTTINGS</span> </li>
     <li id="gists"> <span style="color:#50FA7B;">GISTS</span> </li>
    
-    <li id="stack_overflow"> <span style="color: #FFB86C;">STACK OVERFLOW</span> </li>
+    <li id="stack_overflow"><span style="color: #FFB86C;">STACK OVERFLOW</span> </li>
     <li id="trending">  <span style="color:#FF79C6; ">TRENDING</span> </li>
     <li id="scratch_pad"> <span style="color:#BD93F9; ">SCRATCH PAD</span> </li>
     <li id="playground"> <span style="color: white;">PLAYGROUND </span></li>
@@ -218,13 +242,15 @@ padding-bottom: 2px;
 </div>
 <div class="borders" id="box3"> 
 <heading class="heading">RELEVANT JAVASCRIPT HISTORY </heading>
-<P class="JSHistory"> <a>Data structures: Objects and Arrays :: Eloquent Javascript </a><span style="float: right;">2 days ago</span> </br>
-<a>Ways  of Iterating over an array in Javascript. - GeeksForGeeks</a><span style="float: right;">2 days ago</span> </br>
-<a>Javascript - Understand the arrow function syntax - codeburst</a><span style="float: right;">2 days ago</span> </br>
-<a>Fucntions :: Eloquent Javascript</a> <span style="float: right;">2 days ago</span></br>
-<a>Why is Javascript hard to learn?</a> <span style="float: right;">2 days ago</span></br>
-<a>Program Structure :: Eloquent Javascript</a> <span style="float: right;">2 days ago</span> </p>
-<hr>
+<ul id="JSHistory">
+<li id="DataS"><a>Data structures: Objects and Arrays :: Eloquent Javascript </a><span style="float: right; color: #44475A;">2 days ago</span></li>  
+<li id="Ways"><a>Ways  of Iterating over an array in Javascript. - GeeksForGeeks</a><span style="float: right; color:#44475A;">2 days ago</span></li> 
+<li id="Arrow"><a>Javascript - Understand the arrow function syntax - codeburst</a><span style="float: right; color: #44475A;">2 days ago</span></li> 
+<li id="Functions"><a>Fucntions :: Eloquent Javascript</a> <span style="float: right; color: #44475A;">2 days ago</span></li>
+<li id="Reddit"><a>Why is Javascript hard to learn?</a> <span style="float: right; color: #44475A;">2 days ago</span></li>
+<li id="Programst"><a>Program Structure :: Eloquent Javascript</a> <span style="float: right; color: #44475A;">2 days ago</span></li> 
+</ul>
+<hr style="border: 1px solid #6272A4; ">
 </div>
 <div class="borders" id="box4"> 
 
