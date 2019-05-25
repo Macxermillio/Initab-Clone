@@ -52,6 +52,13 @@ hr {
     grid-row: 1/10;
 }
 
+#list a:hover {
+    cursor: pointer;
+}
+#list a {
+    text-decoration-line: none;
+    color: unset;
+}
 #list {
     list-style: none;
     font-size: 11px;
@@ -102,14 +109,29 @@ font-family: monospace;
 font-size: 14px;
 line-height: 22px;
 }
+#Instructs {
+    text-align: center;
+    font-family: sans-serif;
+    color:#6272A4;
+    font-size: 11px;
+}
 #JSHistory {
 font-family: monospace;
 color: #6272A4;
 font-size: 14px;
 
 }
+
 #JSHistory li {
     padding-bottom: 10px;
+}
+#JSHistory a {
+    text-decoration-line: none;
+    color:unset;
+}
+#JSHistory a:hover {
+    color: yellow;
+    transition-delay: 100ms;
 }
 #JSHistory li#DataS{
     list-style-image: url(https://i.imgur.com/ut0SvCo.png);
@@ -192,14 +214,14 @@ font-size: 14px;
 
 <div class="borders" id="box1"> 
 <ul id="list">
-    <li id="settings"> <span style="color: #8BE9FD;">SETTTINGS</span> </li>
-    <li id="gists"> <span style="color:#50FA7B;">GISTS</span> </li>
+    <li id="settings"> <span style="color: #8BE9FD;"><a>SETTTINGS</a></span> </li>
+    <li id="gists"> <span style="color:#50FA7B;"><a>GISTS</a> </span> </li>
    
-    <li id="stack_overflow"><span style="color: #FFB86C;">STACK OVERFLOW</span> </li>
-    <li id="trending">  <span style="color:#FF79C6; ">TRENDING</span> </li>
-    <li id="scratch_pad"> <span style="color:#BD93F9; ">SCRATCH PAD</span> </li>
-    <li id="playground"> <span style="color: white;">PLAYGROUND </span></li>
-    <li id="help"> <span style="color: #E6DB74;">HELP/INTRO </span></li>
+    <li id="stack_overflow"><span style="color: #FFB86C;"><a>STACK OVERFLOW</a> </span> </li>
+    <li id="trending">  <span style="color:#FF79C6; "><a>TRENDING</a> </span> </li>
+    <li id="scratch_pad"> <span style="color:#BD93F9; "><a>SCRATCH PAD</a> </span> </li>
+    <li id="playground"> <span style="color: white;"><a>PLAYGROUND</a>  </span></li>
+    <li id="help"> <span style="color: #E6DB74;"><a>HELP/INTRO</a>  </span></li>
 </ul>
 
 </div>
@@ -243,12 +265,12 @@ font-size: 14px;
 <div class="borders" id="box3"> 
 <heading class="heading">RELEVANT JAVASCRIPT HISTORY </heading>
 <ul id="JSHistory">
-<li id="DataS"><a>Data structures: Objects and Arrays :: Eloquent Javascript </a><span style="float: right; color: #44475A;">2 days ago</span></li>  
-<li id="Ways"><a>Ways  of Iterating over an array in Javascript. - GeeksForGeeks</a><span style="float: right; color:#44475A;">2 days ago</span></li> 
-<li id="Arrow"><a>Javascript - Understand the arrow function syntax - codeburst</a><span style="float: right; color: #44475A;">2 days ago</span></li> 
-<li id="Functions"><a>Fucntions :: Eloquent Javascript</a> <span style="float: right; color: #44475A;">2 days ago</span></li>
-<li id="Reddit"><a>Why is Javascript hard to learn?</a> <span style="float: right; color: #44475A;">2 days ago</span></li>
-<li id="Programst"><a>Program Structure :: Eloquent Javascript</a> <span style="float: right; color: #44475A;">2 days ago</span></li> 
+<li id="DataS"><a href="#">Data structures: Objects and Arrays :: Eloquent Javascript </a><span style="float: right; color: #44475A;">2 days ago</span></li>  
+<li id="Ways"><a href="#">Ways  of Iterating over an array in Javascript. - GeeksForGeeks</a><span style="float: right; color:#44475A;">2 days ago</span></li> 
+<li id="Arrow"><a href="#">Javascript - Understand the arrow function syntax - codeburst</a><span style="float: right; color: #44475A;">2 days ago</span></li> 
+<li id="Functions"><a href="#">Fucntions :: Eloquent Javascript</a> <span style="float: right; color: #44475A;">2 days ago</span></li>
+<li id="Reddit"><a href="#">Why is Javascript hard to learn?</a> <span style="float: right; color: #44475A;">2 days ago</span></li>
+<li id="Programst"><a href="#">Program Structure :: Eloquent Javascript</a> <span style="float: right; color: #44475A;">2 days ago</span></li> 
 </ul>
 <hr style="border: 1px solid #6272A4; ">
 </div>
@@ -265,7 +287,9 @@ font-size: 14px;
         <div id="month"></div>
     </div>
     
-
+<p id="Instructs"> Did you know you can add CUSTOM LINKS to display in this section?</br>
+    Open the SETTINGS panel and add the URLs of your favorites sites to the 'CUSTOM LINKS' textarea.<br/>
+     Got it! Don't show me this again.</p>
     
 
 </div>
@@ -278,7 +302,9 @@ font-size: 14px;
     function hours() {
   var d = new Date();
   var hours = d.getHours();
- 
+ var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  
   document.getElementById("hours").innerHTML = hours ;
   
   
