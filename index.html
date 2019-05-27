@@ -238,7 +238,7 @@ font-size: 14px;
 
 }
 .issuespullrequests a {
-    text-decoration-line: none;
+    text-decoration-line: none ;
     color: unset;
 }
 .issuespullrequests #pull:hover {
@@ -396,6 +396,7 @@ font-size: 14px;
     </div>
     <div class="yearwrapper">
         <div id="month"></div>
+        <div id="day"></div>
     </div>
     
 <p id="Instructs"><img id="question" src="https://i.imgur.com/mKjOU88.png"/> Did you know you can add CUSTOM LINKS to display in this section?</br>
@@ -471,7 +472,8 @@ function month() {
     var d = new Date();
     var moon = d.getMonth();
     var year = d.getFullYear();
-    document.getElementById("month").innerHTML = monthNames[moon] + ", " + year;
+    var day = d.getDate();
+    document.getElementById("month").innerHTML = monthNames[moon] + " " + day + ", " + year;
     
 }
  setInterval(month,1000);
