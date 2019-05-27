@@ -1,1 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <title>Initab Clone</title>
+    <head>
+<style>
+    body {
+        margin: 0px;
+        overflow: hidden;
+    }
+#wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 2fr 5fr 2fr;
+    grid-template-rows: repeat(1fr, 9);
+    height: 100vh;
 
+    
+    
+
+}
+hr {
+    background-color: #6272A4;
+}
+/*
+.borders {
+    border: 1px solid;
+}
+*/
+#box1 {
+    background-color: #44475A;
+    grid-row: 1/10;
+    font-size: 10px;
+    padding-top: 20px;
+    font-weight: 300px;
+    
+    }
+#box2 {
+    background-color: #282A36;
+    grid-row: 1/10;
+   
+}
+#box3 {
+    background-color: #282A36;
+    grid-row: 1/2;
+    padding-bottom: 1px;
+    
+}
+#box4 {
+    background-color: #282A36;
+    grid-row: 2/10;
+}
+#box5 {
+    background-color: #282A36;
+    grid-row: 1/10;
+    padding-left: 6px;
+}
+
+#list a:hover {
+    cursor: pointer;
+}
+#list a {
+    text-decoration-line: none;
+    color: unset;
+}
+#list {
+    list-style: none;
+    font-size: 11px;
+    
+}
+#list li {
+    padding-bottom: 20px;
+}
+#list li#settings {
+    list-style-image: url(https://i.imgur.com/Rm83pje.png);
+    
+}
+#list li#gists {
+    list-style-image: url(https://i.imgur.com/Pd6XUN0.png);
+}
+#list li#stack_overflow {
+    list-style-image: url(https://i.imgur.com/xVp7TzZ.png);
+}
+#list li#trending {
+    list-style-image: url(https://i.imgur.com/OBWtdka.png);
+}
+#list li#scratch_pad {
+    list-style-image: url(https://i.imgur.com/WEbKv5y.png);
+}
+#list li#playground {
+    list-style-image: url(https://i.imgur.com/QfxUFfD.png);
+}
+#list li#help {
+    list-style-image: url(https://i.imgur.com/VYsX0ec.png);
+}
+.RedditCards {
+display: block;
+width: 250px;
+height: auto;
+margin-left: 15px;
+padding-left: 20px;
+margin-bottom: 40px;
+border-left: 3px solid #44475A;
+}
+.RedditCards:hover {
+    border-left: 3px solid #50FA7B;  
+    cursor: pointer;
+    transition-duration: 200ms;
+  
+}
+p {
+font-family: monospace;
+font-size: 14px;
+line-height: 22px;
+}
+#Instructs {
+    text-align: center;
+    font-family: sans-serif;
+    color:#6272A4;
+    font-size: 11px;
+}
+#JSHistory {
+font-family: monospace;
+color: #6272A4;
+font-size: 14px;
+
+}
+
+#JSHistory li {
+    padding-bottom: 10px;
+}
+#JSHistory a {
+    text-decoration-line: none;
+    color:unset;
+}
+#JSHistory a:hover {
+    color: yellow;
+    transition-delay: 100ms;
+}
+#JSHistory li#DataS{
+    list-style-image: url(https://i.imgur.com/ut0SvCo.png);
+
+}
+#JSHistory li#Ways {
+    list-style-image: url(https://i.imgur.com/lKVAJ1f.png);
+}
+#JSHistory li#Arrow {
+    list-style-image: url(https://i.imgur.com/JRjMTwa.png);
+}
+#JSHistory li#Functions {
+    list-style-image: url(https://i.imgur.com/ut0SvCo.png);
+}
+#JSHistory li#Reddit {
+    list-style-image: url(https://i.imgur.com/04J1Wk0.png);
+}
+#JSHistory li#Programst {
+    list-style-image: url(https://i.imgur.com/ut0SvCo.png);
+}
+.heading {
+    display: block;
+    color:  #8BE9FD;
+    font-family: monospace;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+
+
+}
+/* clock cstyling code below */
+#hours {
+  font-family: sans-serif;
+  color: #6272A4;
+
+  font-size: 120px;
+  text-align: center;
+  
+}
+#minutes {
+  font-family: sans-serif;
+  color: #6272A4;
+  font-size: 120px;
+  text-align: center;
+  
+}
+#ampm  {
+ 
+  font-family: sans-serif;
+  color: #6272A4;
+  padding-top: 77px;
+  font-size: 40px;
+  
+ 
+
+}
+.clockwrapper {
+    display: flex;
+    justify-content: center;
+    
+    }
+.yearwrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+#month {
+    display:  block;
+    position: relative;
+    font-size: 25px;
+    color:#6272A4 ;
+    bottom: 15px;
+    right: 20px;
+}
+/*Above clock styling code*/
+.headinglogo {
+    display: inline;
+}
+#githubiss {
+    display: inline-block;
+
+}
+#gitlogo {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+#switch {
+    text-align: center;
+    font-size: 12px;
+    font-family: monospace;
+    color: #6272A4;
+    position: relative;
+    bottom: 45px;
+}
+.issuespullrequests {
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    bottom: 50px;
+
+}
+.issuespullrequests a {
+    text-decoration-line: none;
+    color: unset;
+}
+.issuespullrequests #pull:hover {
+    color: #60ff26;
+}
+#switch a {
+    text-decoration: none;
+    color: unset;
+}
+#switch a:hover {
+    color: yellow;
+}
+#jsheadinglogo {
+    
+    position: relative;
+    left: 183px;
+    top: 47px;
+}
+#relevanthistory {
+    position: relative;
+    bottom:18px;
+}
+#redditlogo {
+    position: relative;
+    top: 48px;
+    left: 16px;
+}
+#rjs {
+    position: relative;
+    bottom:18px;
+}
+#medialogos {
+    display: flex;
+    justify-content: center;
+}
+#redlog {
+    position: relative; 
+    top: 2px;
+    
+}
+#initablogo{
+    position: relative;
+    left: 20px;
+}
+#allthelogos {
+    position: relative;
+    top: 220px;
+}
+#question {
+    position: relative;
+    top: 4px;
+}
+#triangle {
+    position: relative;
+    bottom: 70px;
+    left: 68px;
+}
+#xmark {
+    position: relative;
+    top: 3px;
+    right:2px;
+}
+</style>
+    </head>
+    <body>
+<div id="wrapper">
+
+<div class="borders" id="box1"> 
+<ul id="list">
+    <li id="settings"> <span style="color: #8BE9FD;"><a>SETTTINGS</a></span> </li>
+    <li id="gists"> <span style="color:#50FA7B;"><a>GISTS</a> </span> </li>
+   
+    <li id="stack_overflow"><span style="color: #FFB86C;"><a>STACK OVERFLOW</a> </span> </li>
+    <li id="trending">  <span style="color:#FF79C6; "><a>TRENDING</a> </span> </li>
+    <li id="scratch_pad"> <span style="color:#BD93F9; "><a>SCRATCH PAD</a> </span> </li>
+    <li id="playground"> <span style="color: white;"><a>PLAYGROUND</a>  </span></li>
+    <li id="help"> <span style="color: #E6DB74;"><a>HELP/INTRO</a>  </span></li>
+</ul>
+<div id="allthelogos"> 
+    <img id="initablogo" src="https://i.imgur.com/RbXrBou.png"/>
+<div id="medialogos"> 
+
+       <a href="#"><img src="https://img.icons8.com/color/30/000000/facebook-circled.png"></a> 
+       <a href="#"><img src="https://img.icons8.com/color/30/000000/linkedin-circled.png"></a> 
+       <a href="#"><img src="https://img.icons8.com/color/30/000000/twitter-circled.png"></a> 
+     <a href="#"><img id="redlog" src="https://i.imgur.com/H1921FE.png" /></a> 
+
+</div>
+</div>
+
+
+</div>
+<div class="borders" id="box2">
+        <img id="redditlogo" src="https://i.imgur.com/UU44TA1.png"/>
+    <heading id="rjs" class="heading">POPULAR ON R/JAVSCRIPT</heading>
+<div class="RedditCards">
+    <p> <span style="color: white;">Faster smarter Javascript debugging In Firefox DevTools</span></br>
+    <span style="color:#8BE9FD "> Posted by:</span> <span style="color: yellow;">u/magneta_placenta</span></br>
+    <span style="color:#6272A4 ">Reddit Score: 243</span></br>
+    <span style="color:#FF79C6 ;">Link to comments</span></p>
+
+</div>
+<div class="RedditCards">
+
+    <p><span style="color: white;">Announcing TypeScript 3.5 RC</span></br>
+    <span style="color:#8BE9FD ">Posted by:</span><span style="color: yellow;">u/DanielRosenwaser</span> </br>
+    <span style="color:#6272A4 ">Reddit Score: 32</span></br>
+    <span style="color:#FF79C6 ;">Link to comments</span></p>
+
+</div>
+<div class="RedditCards">
+    <p><span style="color: white;">The clearer explanation of the fundamentals behind identity in FP I have ever seen</span></br>
+        <span style="color:#8BE9FD ">Posted by:</span> <span style="color: yellow;">u/Fagnerbrack</span> </br>
+        <span style="color:#6272A4 ">Reddit Score: 7 </span> </br>
+        <span style="color:#FF79C6 ;"> Link to comments</span> </p>
+
+</div>
+<div class="RedditCards">
+    <p><span style="color: white;">Chat applicaton using webRTC</span></br>
+        <span style="color:#8BE9FD ">Posted by: </span> <span style="color: yellow;">u/HydroPhobeFireMan</span> </br>
+        <span style="color:#6272A4 ">Reddict Score: 3  </span> <br> 
+        <span style="color:#FF79C6 ;">Link to comments </span>  </p>
+
+</div>
+<div class="RedditCards">
+    <p>Redash Tutorial with Cube.js</p>
+</div>
+
+
+</div>
+<div class="borders" id="box3"> 
+    
+        <img id="jsheadinglogo" src="https://i.imgur.com/GITOBbJ.png">
+<heading id="relevanthistory" class="heading">RELEVANT JAVASCRIPT HISTORY </heading>
+
+        
+<ul id="JSHistory">
+<li id="DataS"><a href="#">Data structures: Objects and Arrays :: Eloquent Javascript </a><span style="float: right; color: #878c85;">2 days ago</span></li>  
+<li id="Ways"><a href="#">Ways  of Iterating over an array in Javascript. - GeeksForGeeks</a><span style="float: right; color: #878c85 ;">2 days ago</span></li> 
+<li id="Arrow"><a href="#">Javascript - Understand the arrow function syntax - codeburst</a><span style="float: right; color: #878c85;">2 days ago</span></li> 
+<li id="Functions"><a href="#">Fucntions :: Eloquent Javascript</a> <span style="float: right; color: #878c85;">2 days ago</span></li>
+<li id="Reddit"><a href="#">Why is Javascript hard to learn?</a> <span style="float: right; color: #878c85;">2 days ago</span></li>
+<li id="Programst"><a href="#">Program Structure :: Eloquent Javascript</a> <span style="float: right; color: #878c85;">2 days ago</span></li> 
+</ul>
+<hr style="border: 1px solid #878c85; ">
+</div>
+<div class="borders" id="box4"> 
+
+    <div class="clockwrapper">
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="ampm"></div>
+        
+        
+    </div>
+    <div class="yearwrapper">
+        <div id="month"></div>
+    </div>
+    
+<p id="Instructs"><img id="question" src="https://i.imgur.com/mKjOU88.png"/> Did you know you can add CUSTOM LINKS to display in this section?</br>
+    Open the SETTINGS panel and add the URLs of your favorites sites to the 'CUSTOM LINKS' textarea.<br/>
+     <span style="color: #FFB86C"> <img id="xmark"src="https://i.imgur.com/XrA6viw.png"  />Got it! Don't show me this again </span>.</p>
+    
+
+</div>
+<div class="borders" id="box5"> 
+    <div class="headinglogo">
+            <img id="gitlogo" src="https://i.imgur.com/CARZMou.png"/>
+         <heading id="githubiss" class="heading">GITHUB ISSUES HISTORY</heading>
+    </div>
+   
+    <p id="switch"><a href="#">switch to gitlab </a></p>
+    <diV class="issuespullrequests">
+         <p><span style="color: yellow"><a href="#">ISSUES</a></span>  <span style="color:#FF79C6 "> <a id="pull" href="#">PULL REQUESTS</a> </span></p>
+</diV>
+<img  id="triangle" src="https://i.imgur.com/AJrlfgq.png">
+ <hr style="border: 1px solid #878c85 ; position: relative; bottom: 30px; ">
+   
+</div>
+
+
+
+</div>
+<script>
+    function hours() {
+  var d = new Date();
+  var hours = d.getHours();
+ var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  
+  document.getElementById("hours").innerHTML = hours ;
+  
+  
+}
+
+setInterval(hours,1000)
+
+function minutes() {
+  var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+ 
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  document.getElementById("minutes").innerHTML = ":" + minutes ;
+  
+  
+}
+
+setInterval(minutes,1000)
+
+function ampm() {
+  var d = new Date();
+  var hours = d.getHours();
+  var minutes = d.getMinutes();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  document.getElementById("ampm").innerHTML = ampm;
+  
+  
+}
+
+setInterval(ampm,1000)
+
+var monthNames = ["January", "February", "March", "April", "May","June","July", "August", "September", "October", "November","December"]
+
+function month() {
+    var d = new Date();
+    var moon = d.getMonth();
+    var year = d.getFullYear();
+    document.getElementById("month").innerHTML = monthNames[moon] + ", " + year;
+    
+}
+ setInterval(month,1000);
+ 
+
+
+</script>
+    </body>
+</html>
