@@ -36,12 +36,19 @@ hr {
 #box2 {
     background-color: #282A36;
     grid-row: 1/10;
+    overflow: scroll;
    
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+
 }
 #box3 {
     background-color: #282A36;
     grid-row: 1/2;
     padding-bottom: 1px;
+    padding-left: 5px;
     
 }
 #box4 {
@@ -273,6 +280,7 @@ font-size: 14px;
 #medialogos {
     display: flex;
     justify-content: center;
+    z-index: 100;
 }
 #redlog {
     position: relative; 
@@ -285,7 +293,8 @@ font-size: 14px;
 }
 #allthelogos {
     position: relative;
-    top: 220px;
+    top: 180px;
+    z-index: 100;
 }
 #question {
     position: relative;
@@ -363,9 +372,29 @@ font-size: 14px;
         <span style="color:#FF79C6 ;">Link to comments </span>  </p>
 
 </div>
-<div class="RedditCards">
-    <p>Redash Tutorial with Cube.js</p>
+<div class="RedditCards"><p><span style="color: white;">React Simple Animate v3 (2.2kb) - make UI animation simple</span> </br>
+    <span style="color:#8BE9FD ">Posted by:</span> <span style="color: yellow;">u/bluebill1049</span></br>
+    <span style="color:#6272A4 ">Reddit Score: 1</span></br>
+    <span style="color:#FF79C6 ;">Link to Comments</span></br>
+     </p>
+    </div>
+    
+    <div class="RedditCards">
+        <p> <span style="color: white;">Major updates to OvernightJS. OvernightJS/core now supports child controllers, 
+         all Express routes, and adding options to controllers. 
+         OvernightJS/logger now can be used statically or as an instance:</span></br>
+     
+         <span style="color:#8BE9FD ">Posted by:</span> <span style="color: yellow;">u/TheWebDever</span> </br>
+         <span style="color:#6272A4 ">Reddit Score: 1</span></br>
+         <span style="color:#FF79C6 ;">Link to Comments</span></p>
+     </div>
+     <div class="RedditCards"> 
+         <p> <span style="color: white;">Refactoring code into tiny, pure functions (funfunfunction)</span> </br>
+            <span style="color:#8BE9FD ">Posted by:</span> <span style="color: yellow;">u/krasimirtsonev</span> </br>
+            <span style="color:#6272A4 "> Reddit Score: 1 </span> </br>
+            <span style="color:#FF79C6 ;"> Link to Comments </span></p>
 </div>
+     
 
 
 </div>
